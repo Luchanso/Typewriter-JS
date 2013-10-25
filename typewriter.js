@@ -90,3 +90,10 @@ function TypeWriter (sSelector, nRate) {
     clean();
   };
 }
+
+function AsyncTypeWrite(time) {  
+  for(var i = 1; i < arguments.length; i++) {
+        var tw = new TypeWriter(arguments[i], time);
+        tw.play();        
+    }
+}
